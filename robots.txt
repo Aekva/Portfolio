@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://aekva-design.fr/sitemap.xml
