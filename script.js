@@ -19,21 +19,21 @@ const projects = [
         category: "Restaurant / Site vitrine",
         image: "images/maison-sepia.jpg",
         alt: "Capture complète du site Maison Sépia",
-        url: "https://baptiste9519.github.io/maison-sepia/"
+        url: "https://aekva.github.io/maison-sepia/"
     },
     {
         title: "Studio Néra",
         category: "Beauté & bien-être / Site vitrine",
         image: "images/studio-nera.jpg",
         alt: "Capture complète du site Studio Néra",
-        url: "https://baptiste9519.github.io/studio-nera/"
+        url: "https://aekva.github.io/studio-nera/"
     },
     {
         title: "BLOC.",
         category: "Artisan & services / Site vitrine",
         image: "images/bloc.jpg",
         alt: "Capture complète du site BLOC.",
-        url: "https://baptiste9519.github.io/BLOC/"
+        url: "https://aekva.github.io/bloc/"
     }
 ];
 
