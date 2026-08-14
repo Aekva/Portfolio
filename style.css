@@ -4167,3 +4167,22 @@ section {
     gap: 10px;
   }
 }
+
+/*TEST*/
+
+
+  html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.form-submit-arrow {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .form-submit-arrow svg {
+    display: block;
+  }
