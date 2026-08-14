@@ -4170,12 +4170,291 @@ section {
 
 /*TEST*/
 
+/* =========================
+   RESPONSIVE SAFETY
+   Safari / iOS
+========================= */
 
-  html,
-body {
-  max-width: 100%;
-  overflow-x: hidden;
-}
+html {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+  
+  body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+  
+  /* Empêche Grid et Flex d'imposer
+     une largeur supérieure au viewport */
+  
+  .site-header,
+  .hero,
+  .projects,
+  .services,
+  .offers,
+  .process,
+  .contact,
+  .footer,
+  .section-head,
+  .section-head-content,
+  .services-grid,
+  .offers-grid,
+  .maintenance-card,
+  .maintenance-main,
+  .maintenance-features,
+  .maintenance-side,
+  .project-form,
+  .form-field,
+  .form-field-message,
+  .form-submit-row,
+  .contact-form-wrapper,
+  .contact-form-heading,
+  .contact-meta {
+    min-width: 0;
+  }
+  
+  
+  /* =========================
+     TABLETTE / MOBILE
+  ========================= */
+  
+  @media (max-width: 1000px) {
+  
+    /* 100vw peut être problématique
+       sur Safari mobile */
+  
+    .main-nav {
+      width: 100%;
+      max-width: 100%;
+    }
+  
+    .project-form {
+      width: 100%;
+      max-width: 100%;
+    }
+  
+    .form-field,
+    .form-field-message,
+    .form-submit-row {
+      width: 100%;
+      max-width: 100%;
+      min-width: 0;
+    }
+  
+    .form-field input,
+    .form-field select,
+    .form-field textarea {
+      width: 100%;
+      max-width: 100%;
+      min-width: 0;
+    }
+  
+    .maintenance-card,
+    .offer-card,
+    .offer-card-content {
+      width: 100%;
+      max-width: 100%;
+    }
+  }
+  
+  
+  /* =========================
+     MOBILE
+  ========================= */
+  
+  @media (max-width: 650px) {
+
+    .main-nav {
+        overflow-x: hidden;
+        overflow-y: auto;
+      }
+    
+      .main-nav a {
+        max-width: 100%;
+      }
+  
+    .hero,
+    .projects,
+    .services,
+    .offers,
+    .process,
+    .contact {
+      width: 100%;
+      max-width: 100%;
+    }
+  
+    .hero-content,
+    .hero-bottom,
+    .section-head,
+    .section-head-content {
+      width: 100%;
+      max-width: 100%;
+      min-width: 0;
+    }
+  
+    .hero h1,
+    .section-head h2,
+    .contact h2 {
+      max-width: 100%;
+      overflow-wrap: normal;
+    }
+  
+  
+    /* CARROUSEL
+       Le dépassement reste contenu
+       dans la section projets */
+  
+    .projects {
+      overflow-x: hidden;
+    }
+  
+    .project-carousel,
+    .project-stage {
+      width: 100%;
+      max-width: 100%;
+    }
+  
+  
+    /* OFFRES */
+  
+    .offers-grid,
+    .offer-card,
+    .offer-card-content {
+      width: 100%;
+      max-width: 100%;
+      min-width: 0;
+    }
+  
+    .offer-header {
+      min-width: 0;
+    }
+  
+    .offer-description,
+    .offer-features,
+    .offer-help {
+      max-width: 100%;
+    }
+  
+  
+    /* MAINTENANCE */
+  
+    .maintenance-card,
+    .maintenance-main,
+    .maintenance-features,
+    .maintenance-side {
+      width: 100%;
+      max-width: 100%;
+      min-width: 0;
+    }
+  
+  
+    /* FORMULAIRE */
+  
+    .contact-form-wrapper {
+      width: 100%;
+      max-width: 100%;
+  
+      padding: 24px 18px;
+    }
+  
+    .project-form {
+      width: 100%;
+      max-width: 100%;
+      min-width: 0;
+    }
+  
+    .form-field,
+    .form-field-message,
+    .message-meta,
+    .form-submit-row {
+      width: 100%;
+      max-width: 100%;
+      min-width: 0;
+    }
+  
+    .form-field input,
+    .form-field select,
+    .form-field textarea {
+      width: 100%;
+      max-width: 100%;
+      min-width: 0;
+    }
+  
+    .message-meta {
+      overflow: hidden;
+    }
+  
+    .character-counter {
+      flex-shrink: 0;
+    }
+  
+    .form-submit-row p {
+      width: 100%;
+      max-width: 100%;
+    }
+  
+    .form-submit {
+      width: 100%;
+      max-width: 100%;
+    }
+  
+  
+    /* POPUPS */
+  
+    .maintenance-modal {
+      width: 100%;
+      max-width: 100%;
+    }
+  
+    .maintenance-modal-card {
+      width: 100%;
+      max-width: 520px;
+    }
+  
+  
+    /* TOAST */
+  
+    .form-toast {
+      width: auto;
+      max-width: none;
+  
+      left: 16px;
+      right: 16px;
+    }
+
+    .footer {
+        grid-template-columns: auto 1fr;
+        gap: 10px;
+      
+        padding-left: 14px;
+        padding-right: 14px;
+      }
+      
+      .footer-brand {
+        font-size: 18px;
+      }
+      
+      .footer-links {
+        gap: 7px;
+        justify-content: flex-end;
+      }
+      
+      .footer-links a {
+        font-size: 5.4px;
+        letter-spacing: 0.2px;
+        white-space: nowrap;
+      }
+      
+      .footer-bottom p,
+      .footer-bottom a {
+        font-size: 5.4px;
+        letter-spacing: 0.2px;
+      }
+
+  }
 
 .form-submit-arrow {
     display: inline-flex;
@@ -4185,4 +4464,31 @@ body {
   
   .form-submit-arrow svg {
     display: block;
+  }
+
+  /* =========================
+   MENU MOBILE - PAYSAGE
+========================= */
+
+@media (max-width: 1000px) and (orientation: landscape) and (max-height: 500px) {
+    .main-nav {
+      justify-content: flex-start;
+  
+      padding:
+        28px
+        max(70px, env(safe-area-inset-right))
+        28px
+        max(70px, env(safe-area-inset-left));
+  
+      gap: 10px;
+  
+      overflow-y: auto;
+      overflow-x: hidden;
+    }
+  
+    .main-nav a {
+      font-size: clamp(28px, 8vh, 38px);
+      line-height: 1;
+      max-width: 100%;
+    }
   }
