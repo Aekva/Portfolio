@@ -4107,13 +4107,16 @@ section {
 
   .legal-hero h1 {
     margin-top: 40px;
-
-    font-size:
-      clamp(47px, 14vw, 66px);
-
-    line-height: 0.9;
-
-    letter-spacing: -3px;
+  
+    max-width: 100%;
+  
+    font-size: clamp(40px, 11vw, 54px);
+  
+    line-height: 0.92;
+  
+    letter-spacing: -2px;
+  
+    overflow-wrap: anywhere;
   }
 
   .legal-intro {
