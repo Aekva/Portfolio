@@ -4518,10 +4518,6 @@ html {
     opacity 0.25s ease;
 }
 
-.form-privacy a::after {
-  content: " ↗";
-  font-size: 0.65rem;
-}
 
 .form-privacy a:hover {
   color: #fff;
