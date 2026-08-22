@@ -514,101 +514,114 @@ if ("scrollRestoration" in history) {
   }
   
   
-  /* =========================
-     MENU MOBILE
-  ========================= */
-  
-  const menuToggle =
-    document.querySelector(
-      ".menu-toggle"
-    );
-  
-  const mainNav =
-    document.querySelector(
-      ".main-nav"
-    );
-  
-  
-  function closeMenu() {
-    if (
-      !menuToggle ||
-      !mainNav
-    ) {
-      return;
-    }
-  
-    menuToggle.classList.remove(
-      "active"
-    );
-  
-    mainNav.classList.remove(
-      "active"
-    );
-  
-    menuToggle.setAttribute(
-      "aria-expanded",
-      "false"
-    );
-  
-    document.body.classList.remove(
-      "menu-open"
-    );
+/* =========================
+   MENU MOBILE
+========================= */
+
+const menuToggle =
+  document.querySelector(".menu-toggle");
+
+const mainNav =
+  document.querySelector(".main-nav");
+
+
+function closeMenu() {
+  if (!menuToggle || !mainNav) {
+    return;
   }
-  
-  
-  if (
-    menuToggle &&
-    mainNav
-  ) {
-    menuToggle.addEventListener(
-      "click",
-  
-      function () {
-        const isOpen =
-          mainNav.classList.toggle(
-            "active"
-          );
-  
-        menuToggle.classList.toggle(
-          "active",
-          isOpen
-        );
-  
-        document.body.classList.toggle(
-          "menu-open",
-          isOpen
-        );
-  
-        menuToggle.setAttribute(
-          "aria-expanded",
-          String(isOpen)
-        );
-      }
-    );
-  
-    mainNav
-      .querySelectorAll("a")
-      .forEach(function (link) {
-        link.addEventListener(
-          "click",
-          closeMenu
-        );
-      });
-  }
-  
-  
-  window.addEventListener(
-    "resize",
-  
-    function () {
-      if (
-        window.innerWidth >
-        1000
-      ) {
-        closeMenu();
-      }
+
+  menuToggle.classList.remove("active");
+
+  mainNav.classList.remove("active");
+
+  menuToggle.setAttribute(
+    "aria-expanded",
+    "false"
+  );
+}
+
+
+if (menuToggle && mainNav) {
+
+  menuToggle.addEventListener(
+    "click",
+    function (event) {
+
+      event.stopPropagation();
+
+      const isOpen =
+        mainNav.classList.toggle("active");
+
+      menuToggle.classList.toggle(
+        "active",
+        isOpen
+      );
+
+      menuToggle.setAttribute(
+        "aria-expanded",
+        String(isOpen)
+      );
     }
   );
+
+
+  mainNav
+    .querySelectorAll("a")
+    .forEach(function (link) {
+
+      link.addEventListener(
+        "click",
+        closeMenu
+      );
+
+    });
+
+
+  document.addEventListener(
+    "click",
+    function (event) {
+
+      if (
+        !mainNav.classList.contains("active")
+      ) {
+        return;
+      }
+
+      if (
+        mainNav.contains(event.target) ||
+        menuToggle.contains(event.target)
+      ) {
+        return;
+      }
+
+      closeMenu();
+    }
+  );
+
+
+  document.addEventListener(
+    "keydown",
+    function (event) {
+
+      if (event.key === "Escape") {
+        closeMenu();
+      }
+
+    }
+  );
+}
+
+
+window.addEventListener(
+  "resize",
+  function () {
+
+    if (window.innerWidth > 1000) {
+      closeMenu();
+    }
+
+  }
+);
   
   
   /* =========================
