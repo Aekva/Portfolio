@@ -12,9 +12,9 @@
     <title>AEKVA. — Création de sites vitrines à Montpellier</title>
 
     <meta
-      name="description"
-      content="AEKVA. crée et refond des sites vitrines modernes pour commerces, artisans et petites entreprises à Montpellier. Des sites clairs, personnalisés et pensés pour votre activité."
-    />
+    name="description"
+    content="AEKVA crée et refond des sites vitrines modernes à Montpellier pour artisans, commerces et entreprises. Des sites clairs, personnalisés et efficaces."
+  />
 
     <meta name="robots" content="index, follow" />
 
@@ -83,6 +83,19 @@
     ========================== -->
 
     <link rel="stylesheet" href="style.css" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "AEKVA",
+        "url": "https://aekva-design.fr/",
+        "description": "Création et refonte de sites vitrines pour les entreprises à Montpellier.",
+        "areaServed": {
+          "@type": "City",
+          "name": "Montpellier"
+        }
+      }
+      </script>
   </head>
 
   <body>
@@ -141,9 +154,9 @@
 
           <div class="hero-bottom">
             <p>
-              Conception de sites vitrines modernes, clairs et personnalisés
-              pour les commerces, artisans et petites entreprises. Chaque projet
-              est pensé pour valoriser votre activité et guider naturellement
+              AEKVA conçoit et refond des sites vitrines à Montpellier pour les
+              commerces, artisans et entreprises. Chaque projet est pensé pour
+              valoriser votre activité, renforcer votre image et guider naturellement
               vos visiteurs vers la prise de contact.
             </p>
 
@@ -444,8 +457,7 @@
                     <button
                       type="button"
                       class="help-icon"
-                      aria-label="Qu’est-ce que HTTPS ?"
-                    >
+                      aria-label="Qu’est-ce que le SEO de base ?"                    >
                       ?
                     </button>
 
@@ -462,7 +474,7 @@
                     <button
                       type="button"
                       class="help-icon"
-                      aria-label="Qu’est-ce que HTTPS ?"
+                      aria-label="Qu’est-ce que le SEO de base ?"
                     >
                       ?
                     </button>
@@ -834,15 +846,10 @@
               <div class="select-wrapper">
                 <select id="budget" name="budget" required>
                   <option value="">Sélectionner</option>
-
-                  <option value="500-700">500 € — 700 €</option>
-
-                  <option value="700-1000">700 € — 1 000 €</option>
-
-                  <option value="1000-1500">1 000 € — 1 500 €</option>
-
-                  <option value="1500-plus">Plus de 1 500 €</option>
-
+                  <option value="moins-1000">Moins de 1 000 €</option>
+                  <option value="1000-2000">1 000 € — 2 000 €</option>
+                  <option value="2000-3000">2 000 € — 3 000 €</option>
+                  <option value="3000-plus">Plus de 3 000 €</option>
                   <option value="a-definir">À définir</option>
                 </select>
               </div>
